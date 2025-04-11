@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style type="text/css">@import url(/static/css/login.css);</style>
+ 
+</head>
+<body>
+    <div class="form_login">
+    <form  method="POST">
+        <a href="index"><img src="/static/img/th-255686182-removebg-preview.png" width="40px" height="auto"></a>
+        <p class="title_login">Masuk ke perpustakaan</p>
+        <input type="text" name="username" minlength="5" maxlength="20" placeholder="username ">
+        <input id="password" type="password" name="password" minlength="8" maxlength="100" placeholder="password ">
+        <label id="checkbox"><input type="checkbox">lihat password</label><br>
+        <input class="button" type="submit" value="Masuk">
+
+        <p class="not">tidak punya <a href="register">akun</a>?</p>
+    </form>
+
+</div>
+
+    
+<script>
+    const password = document.getElementById("password")
+const checkbox = document.getElementById("checkbox")
+
+checkbox.addEventListener("click", lihat_password)
+function lihat_password(){
+    if (password.type == "password"){
+        password.setAttribute("type", "text")
+    }else{
+        password.setAttribute("type", "password")
+    }
+}
+</script>
+</body>
+</html>

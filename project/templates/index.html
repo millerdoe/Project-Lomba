@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perpustakaan smkn 3 teknologi dan rekayasa jayapura</title>
+    <link rel="shortcut icon" href="/static/img/logo-removebg-preview.png" type="image/x-icon"> 
+     <style type="text/css">@import url(/static/css/index.css);</style>  
+    <script src="/static/js/index.js"></script>
+
+<body>
+        <nav class="navigation">
+            <img class="image_nav" src="/static/img/logo-removebg-preview.png"  alt="logo">
+            <h3>PERPUSTAKAAN</h3>
+            <a class="a1" href="index">Home</a>
+            <a class="a1" href="ai">AI</a>
+            <a class="a1" href="https://smkn3-jayapura.sch.id/" target="_blank">Sch.id</a>
+            <a class="a1" href="login">Login</a>
+            <button class="button" onclick="look_nav()"><img src="/static/img/hamburger-nav-icon-9.png"></button>
+ 
+            <div class="navigation_tablet">
+                <button class="close" onclick="close_nav()"><img src="/static/img/th-255686182-removebg-preview.png"></button>
+                <li><a href="index">Home</a></li>
+                <li><a href="ai">AI</a></li>
+                <li><a href="https://smkn3-jayapura.sch.id/" target="_blank">Sch.id</a></li>
+                <li><a href="login">Login</a></li>
+            </div>
+        </nav>
+
+      <header class="header">
+        <h2 class="header_text">PERPUSTAKAAN DIGITAL SMKN 3 TEKNOLOGI DAN REKAYASA JAYAPURA</h2>
+    </header>
+
+    <form method="POST">
+        <input type="search" name="query" placeholder="search">
+        <input type="submit" value="search">
+    </form>
+
+    <h3 class="judul_article">artikel</h3>
+    <article class="article1">
+    {%if hasil %}
+    {%for url in  hasil%}
+    <div class="gallery">
+        <a target="_blank" href="{{url.url}}">
+          <img src="{{url.img_url}}"  width="600" height="400">
+        </a>
+        <div class="desc">{{url.title}}</div>
+        <a href="{{url.url}}" target="_blank">baca ini</a>
+      </div>
+        {%endfor%}
+    {%else%}
+    <div class="gallery">
+      <a target="_blank" href="https://ia800409.us.archive.org/9/items/gray-hat-hacking-the-ethical-hackers-handbook-pdfdrive/Hacking%20with%20Python_%20The%20Ultimate%20Beginners%20Guide%20(%20PDFDrive%20).pdf">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.xHNCzvvZeUMs8VarEz8nXAAAAA%26pid%3DApi&f=1&ipt=fb098d2a7bd286c01c34929eeb739a285e196eb4568ffebc1544b91c8951a905&ipo=images"  width="600" height="400">
+      </a>
+      <div class="desc">peretasan den python</div>
+      <a href="#" target="_blank">baca ini</a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.w3schools.com/html/default.asp">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kONyBXBBgMzBlKz3jSaWrgHaEG%26pid%3DApi&f=1&ipt=cde786f244aa17802e308820af43d956b04de3f876316d054f62ab830554e4ab&ipo=images"  width="600" height="400">
+      </a>
+      <div class="desc">coding html</div>
+      <a href="#" target="_blank">muali</a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.petanikode.com/tutorial/">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Z5bYs3ukBJwVspq3lXn0NAHaEK%26pid%3DApi&f=1&ipt=e551ed87b963e891c1056bd85d1d81ba48a2c3c3e4a9cc529b73bd09ddb0c557&ipo=images"  width="600" height="400">
+      </a>
+      <div class="desc">temukan bahasa Pemrograman yang cocok</div>
+      <a href="#" target="_blank">mulai</a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.suaralapagonews.com/2024/07/west-papua-suaralapagonews-surat.html">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.BI-dMbHMErZkcDu3eVVCMAHaD4%26pid%3DApi&f=1&ipt=d8a24cccc9a77208c96ead3a7dd6c4121bc76e37ef0c57ca3877c1d5a1eabca6&ipo=images"  width="600" height="400">
+      </a>
+      <div class="desc">sejarah papua dikontrak ke indonesia</div>
+      <a href="#" target="_blank">baca ini</a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://repository.penerbitwidina.com/media/publications/565172-sistem-kelistrikan-ed7dcb12.pdf">
+        <img src="/static/img/lis.png"  width="600" height="400">
+      </a>
+      <div class="desc">sistem kelistrikan</div>
+      <a href="#" target="_blank">baca ini</a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://wawasansejarah.com/sejarah-republik-indonesia-serikat/">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ZZbOpmShtTsaec0zI6EhqQHaDh%26pid%3DApi&f=1&ipt=c6c8aa1b949451ea7d0f7ce8eba873122a699170630d023b279b5f3d50707fd2&ipo=images"  width="600" height="400">
+      </a>
+      <div class="desc">sejarah republik indonesia serikat</div>
+      <a href="#" target="_blank">baca ini</a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.studypool.com/documents/21877098/modul-ajar-od-tjkt">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images"  width="600" height="400">
+      </a>
+      <div class="desc">Modul ajar od tjkt - Studypool</div>
+      <a href="#" target="_blank">baca ini</a>
+    </div>
+    {%endif%}
+    </article>
+    <strong><i><h3>Cover buku di perpustakaan:</h3></i></strong>
+    
+    <article class="article2">
+      <div class="book-item">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+        <div class="book-info">
+            <h4>teknik dasar jaringan komputer</h4>
+            <p>Penerbit jhon doe</p>
+            <div class="rating">★★★☆☆</div>
+            <div class="meta">
+            </div>
+        </div>
+    </div>
+    
+    <div class="book-item">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+      <div class="book-info">
+          <h4>teknik dasar jaringan komputer</h4>
+          <p>Penerbit jhon doe</p>
+          <div class="rating">★★★☆☆</div>
+          <div class="meta">
+          </div>
+      </div>
+  </div>
+
+  <div class="book-item">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+    <div class="book-info">
+        <h4>teknik dasar jaringan komputer</h4>
+        <p>Penerbit jhon doe</p>
+        <div class="rating">★★★☆☆</div>
+        <div class="meta">
+        </div>
+    </div>
+</div>
+
+<div class="book-item">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+  <div class="book-info">
+      <h4>teknik dasar jaringan komputer</h4>
+      <p>Penerbit jhon doe</p>
+      <div class="rating">★★★☆☆</div>
+      <div class="meta">
+      </div>
+  </div>
+</div>
+</article>
+
+<a href="login" class="lihat_semua">
+  <button class="button_lihat_semua">lihat selengkapnya</button>
+</a>
+
+
+
+    <footer>
+    <a href="https://web.whatsapp.com"><img src="/static/img/w.png"> whatsapp</a>
+    <a href="https://www.instagram.com">Instagram</a>
+    <a href="https://www.gmail.com">Email</a>
+    <a href="https://www.youtube.com">YouTube</a>
+    <p>Hak Cipta 2025 © smkn 3 teknologi dan rekayasa jayapura</p>
+    </footer>
+</body>
+</html>

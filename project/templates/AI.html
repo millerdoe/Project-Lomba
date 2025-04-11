@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deepseek api</title>
+    <link rel="stylesheet" href="/static/css/ai.css">
+</head>
+<body>
+    <form method="POST">
+        <h2>HELLO SAYA API DEPSEEK</h2>
+        <p>siap menjawab pertanyaan anda</p>
+        <input type="search" name="cari" placeholder="apa?">
+        <input id="button" type="submit" value="tanya">
+      
+            {%if query%}
+            <fieldset>
+            
+                {{hasil}}
+            
+        </fieldset>
+            {%else%}
+
+            {%endif%}
+        
+    </form>
+
+    <script>
+        /*
+     const button = document.getElementById("button");
+     const fieldset = document.querySelector("fieldset");
+
+     button.addEventListener("click", hasil_query);
+
+     function hasil_query(){
+           fieldset.style.display = "flex"
+        
+     }
+     */
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: aliceblue;
+    background-image: url("/static/img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+form{
+    width: 270px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: min(1em, 8%);
+}
+
+input{
+   padding: min(1em, 2%);
+   margin: 8px 10px;
+   border-radius: 2px;
+}
+
+.submit{
+    width: 100px;
+    margin-left: 55px;
+}
+
+p{
+    text-align: center;
+}

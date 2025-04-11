@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     background-image: url("/static/img/header.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+}
+
+form{
+    width: 270px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: min(1em, 8%);
+
+}
+
+.title_login{
+    size: 12px;
+    text-align: center;
+
+}
+
+
+input{
+    border-radius: 3px;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    padding: min(1em , 2%);
+    
+   
+}
+
+label{
+    margin: 0;
+}
+
+.button{
+    width: 100px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 60px;
+
+}
+.not{
+    text-align: center;
+}

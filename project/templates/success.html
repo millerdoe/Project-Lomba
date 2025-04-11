@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <!-- <div class="book-item overdue"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERPUSTAKAAN</title>
+    <!-- <style type="text/css">@import url(/static/css/success.css);</style> -->
+
+    <style>
+          .dashboard {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3498db;
+        }
+        
+        .account-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        
+        .status-badge {
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .status-badge.active {
+            background: #2ecc71;
+            color: white;
+        }
+        
+        .book-list {
+            display: flex;
+            padding: 10px;
+            flex-direction: row;
+            gap: 15px;
+        }
+        
+        .book-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        
+        .book-cover {
+            width: 80px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .book-info {
+            flex: 1;
+        }
+        
+        .book-info h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+
+        
+        @media (max-width: 500px) {
+            .user-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .quick-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .all_item {
+                flex-direction: column;
+            }
+            
+            .book-cover {
+                width: 100%;
+                height: auto;
+                max-height: 200px;
+            }
+        }
+
+    </style>
+<body>
+    <div class="dashboard">
+
+    <div class="user-profile">
+        <img src="/static/img/logo-removebg-preview.png" alt="Foto Profil" class="avatar">
+        <div>
+            <h2>Selamat Datang, {{username}}</h2>
+            <p>kelas:{{kelas}}/jabatan | [NIS/NIP]</p>
+            <div class="account-status">
+                <span class="status-badge active">Aktif</span>
+                <span>Anggota sejak: {{time}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <button style="margin-right: auto;"><a href="log_out">exit</a></button>
+<nav class="main-menu">
+     <ul>
+        <li class="active">
+            <a href="/dashboard">
+                <i class="icon-home"></i>
+                <span>Beranda</span>
+            </a>
+        </li>
+        <li>
+            <a href="/katalog">
+                <i class="icon-search"></i>
+                <span>Cari Buku</span>
+            </a>
+        </li>
+        <li>
+            <a href="/pinjaman">
+                <i class="icon-bookmark"></i>
+                <span>Pinjaman Saya</span>
+                <span class="badge">5</span>
+            </a>
+        </li>
+        <li>
+            <a href="/ebook">
+                <i class="icon-tablet"></i>
+                <span>E-Book</span>
+            </a>
+        </li>
+        <li>
+            <a href="/history">
+                <i class="icon-history"></i>
+                <span>Riwayat</span>
+            </a>
+        </li>
+       
+        <li>
+            <a href="/admin">
+                <i class="icon-settings"></i>
+                <span>Admin</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+<section class="content-section">
+    <h3><i class="icon-bookmark"></i>DAFTAR BUKU DI PERPUSTAKAAN SMKN 3 JAYAPURA</h3>
+     <div class="all_item">
+    <div class="book-list">
+        <div class="book-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+            <div class="book-info">
+                <h4>teknik dasar jaringan komputer</h4>
+                <p>Penerbit jhon doe</p>
+                <div class="rating">★★★☆☆</div>
+                <div class="meta"></div>
+            </div>
+        </div>
+
+           <div class="book-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._fEraUlZPPcr6_58De-2_gHaEK%26pid%3DApi&f=1&ipt=cdb5efacd6633cf11ca07bd1cbc4228adfe185d240ed77a3e330474f00e98304&ipo=images" alt="Cover Buku" class="book-cover">
+            <div class="book-info">
+                <h4>Pemrograman Python untuk Pemula</h4>
+                <p>Penerbit jane doe</p>
+                <p>★★☆☆☆</p>
+            </div>
+        </div>
+
+        <div class="book-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.5bf1zSgoX7JwkMIE47gEVgAAAA%26pid%3DApi&f=1&ipt=766b70a351af9b1696e786fc3690d603c11289b0f17509bdb12e6cb87552ec6b&ipo=images" alt="Cover Buku" class="book-cover">
+            <div class="book-info">
+                <h4>Belajar cepat Pemrograman web site</h4>
+                <p>Penerbit jane doe</p>
+                <p>★★★★☆</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-list">
+        <div class="book-item">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+        <div class="book-info">
+            <h4>teknik dasar jaringan komputer</h4>
+            <p>Penerbit jhon doe</p>
+            <div class="rating">★★★☆☆</div>
+            <div class="meta">
+            </div>
+        </div>
+    </div>
+
+
+        <div class="book-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+            <div class="book-info">
+                <h4>teknik dasar jaringan komputer</h4>
+                <p>Penerbit jhon doe</p>
+                <div class="rating">★★★☆☆</div>
+            </div>
+        </div>
+
+        <div class="book-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+            <div class="book-info">
+                <h4>teknik dasar jaringan komputer</h4>
+                <p>Penerbit jhon doe</p>
+                <div class="rating">★★★☆☆</div>
+            </div>
+    </div>
+</div>
+
+<div class="book-list">
+<div class="book-item">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9PNHy-UlZ6SmKhAiqROnywAAAA%26pid%3DApi&f=1&ipt=07295eb3f575f3b6b8e2e3787a63cb85dbf2cea23158be8004575c3c235f0a67&ipo=images" alt="Cover Buku" class="book-cover">
+    <div class="book-info">
+        <h4>teknik dasar jaringan komputer</h4>
+        <p>Penerbit jhon doe</p>
+        <div class="rating">★★★☆☆</div>
+        <div class="meta"></div>
+    </div>
+</div>
+
+   <div class="book-item">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._fEraUlZPPcr6_58De-2_gHaEK%26pid%3DApi&f=1&ipt=cdb5efacd6633cf11ca07bd1cbc4228adfe185d240ed77a3e330474f00e98304&ipo=images" alt="Cover Buku" class="book-cover">
+    <div class="book-info">
+        <h4>Pemrograman Python untuk Pemula</h4>
+        <p>Penerbit jane doe</p>
+        <p>★★☆☆☆</p>
+    </div>
+</div>
+
+<div class="book-item">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.5bf1zSgoX7JwkMIE47gEVgAAAA%26pid%3DApi&f=1&ipt=766b70a351af9b1696e786fc3690d603c11289b0f17509bdb12e6cb87552ec6b&ipo=images" alt="Cover Buku" class="book-cover">
+    <div class="book-info">
+        <h4>Belajar cepat Pemrograman web site</h4>
+        <p>Penerbit jane doe</p>
+        <p>★★★★☆</p>
+    </div>
+</div>
+</div>
+
+</div>
+
+
+        <cite>
+            <strong>catatan:</strong> bagi siswa yang ingin membaca, silahan datang ke perpus, saat waktu kosong
+        </cite>
+     </section>
+
+    </div>
+
+</body>
+</html>

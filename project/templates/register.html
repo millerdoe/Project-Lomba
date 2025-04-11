@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style type="text/css">@import url(/static/css/register.css);</style>
+    
+</head>
+<body>
+    <form  method="POST">
+        <p>daftar ke perpustakaan</p>
+        <input type="text" name="username" minlength="5" maxlength="20" placeholder="nama lengkap"><br>
+        <input type="text" name="kelas"  placeholder="kelas 10-12"><br>
+        <input id="password" type="password" name="password" minlength="8" maxlength="100" placeholder="password > 8"><br>
+        <label><input id="checkbox" type="checkbox">lihat password</label><br>
+        <input class="submit" type="submit" value="daftar">
+        <p>punya akun <a href="login">login</a>?</p>
+    </form>
+
+    <script>
+        const password = document.getElementById("password")
+        const checkbox = document.getElementById("checkbox")
+
+        checkbox.addEventListener("click", lihat_password)
+
+        function lihat_password(){
+            if (password.type == "password"){
+                password.setAttribute("type", "text")
+            }else{
+                password.setAttribute("type", "password")
+            }
+        }
+    </script>
+</body>
+</html>
